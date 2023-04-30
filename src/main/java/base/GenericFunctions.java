@@ -8,32 +8,17 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class GenericFunctions {
+public abstract class GenericFunctions extends Hooks{
 
-    protected WebDriver driver;
-
-    @Before
-    public void initializeDriver() {
-        WebDriverManager.chromedriver().setup();
-        driver= new ChromeDriver();
-        driver.get("https://ui.cogmento.com/");
-    }
-
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
 
     public String getPageTitle() {
-        WebDriverManager.chromedriver().browserVersion("112").setup();
-        driver= new ChromeDriver();
-        driver.get("https://ui.cogmento.com/");
         return driver.getTitle();
     }
 
