@@ -1,0 +1,29 @@
+cucumber -> open source tool support behavior driver development
+
+Advantages:
+1. open source tool which support BDD with multiple lan binding java, js, c# ,python, perl
+2. plain english syntax, easy to understand
+3. we can involve people from non-tech background . Devs , BA , product owner can contribute to feature/scenarios
+4. increases code reusability
+
+Disadvantages:
+1. extra rework in case test team doesn't receive scenarios in gherkin with reqs
+2. limited support with parallel execution and cross browser testing
+
+plugins: Gherkin, cucumber
+
+dependencies: selenium , cucumber-java, cucumber-core, cucumber-junit, gherkin , webdriver manager
+
+cucumber options:
+
+1.feature - specify feature file path
+2. glue - specify step def path
+3. dryrun - checks if steps defs are mapped to feature
+4. monochrome -
+5. plugin -
+
+
+
+
+
+
