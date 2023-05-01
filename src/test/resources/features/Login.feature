@@ -1,4 +1,3 @@
-
 Feature: Login feature
 
   Scenario Outline: User is able to login with valid credentials

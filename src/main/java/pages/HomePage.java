@@ -13,8 +13,8 @@ import java.time.Duration;
 
 public class HomePage extends GenericFunctions {
 
-    @FindBy(xpath = "//div[@class='header item']")
-    private WebElement homePageHeader;
+    @FindBy(css = "[class='home icon']")
+    private WebElement homeIcon;
 
     WebDriverWait wait;
     WebDriver driver;
@@ -26,8 +26,8 @@ public class HomePage extends GenericFunctions {
         PageFactory.initElements(driver, this);
     }
 
-    public String getHomePageHeaderText() {
-        wait.until(ExpectedConditions.urlToBe("https://ui.cogmento.com/"));
-        return getElementText(homePageHeader);
+    public boolean isHomeIconDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(homeIcon));
+        return homeIcon.isDisplayed();
     }
 }

@@ -14,7 +14,6 @@ public class HomePageSteps {
 
     @Then("I should be navigated to home page")
     public void i_should_be_navigated_to_home_page() {
-        System.out.println(homePage.getHomePageHeaderText());
-        Assert.assertTrue(homePage.getHomePageHeaderText().contains("COGMENTO"));
+        Assert.assertTrue(homePage.isHomeIconDisplayed());
     }
 }
