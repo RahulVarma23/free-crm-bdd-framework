@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Hooks {
-    public static WebDriver driver;
+    private WebDriver driver;
 
     @Before
     public void initializeDriver() {
@@ -17,6 +17,7 @@ public class Hooks {
         //options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=*");
         driver= new ChromeDriver(options);
+        driver.manage().window().maximize();
         driver.get("https://ui.cogmento.com/");
     }
 
@@ -28,5 +29,4 @@ public class Hooks {
     public WebDriver getDriver() {
         return driver;
     }
-
 }

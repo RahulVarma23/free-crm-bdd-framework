@@ -1,6 +1,8 @@
 package pages;
 
 import base.GenericFunctions;
+import base.Hooks;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,15 +10,19 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage extends GenericFunctions {
 
     @FindBy(name = "email")
-    WebElement usernameTextBox;
+    private WebElement usernameTextBox;
 
     @FindBy(xpath="//input[@type='password']")
-    WebElement passwordTextBox;
+    private WebElement passwordTextBox;
 
     @FindBy(css="[class*='submit']")
-    WebElement loginButton;
+    private WebElement loginButton;
 
-    public LoginPage() {
+    WebDriver driver;
+
+    public LoginPage(Hooks hooks) {
+        super(hooks);
+        driver = hooks.getDriver();
         PageFactory.initElements(driver, this);
     }
 

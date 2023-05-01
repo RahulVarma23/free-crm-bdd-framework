@@ -19,8 +19,8 @@ cucumber options:
 1.feature - specify feature file path
 2. glue - specify step def path
 3. dryrun - checks if steps defs are mapped to feature
-4. monochrome -
-5. plugin -
+4. monochrome - formats the console output
+5. plugin - to generate reports or add additional features
 
 
 

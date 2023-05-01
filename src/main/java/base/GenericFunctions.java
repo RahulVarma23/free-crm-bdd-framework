@@ -2,6 +2,7 @@ package base;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -9,8 +10,13 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class GenericFunctions extends Hooks{
+public abstract class GenericFunctions {
 
+    WebDriver driver;
+
+    public GenericFunctions(Hooks hooks){
+        driver = hooks.getDriver();
+    }
 
     public String getPageTitle() {
         return driver.getTitle();
@@ -29,7 +35,7 @@ public abstract class GenericFunctions extends Hooks{
         element.sendKeys(text);
     }
 
-    public String getText(WebElement element){
+    public String getElementText(WebElement element){
         return element.getText();
     }
 

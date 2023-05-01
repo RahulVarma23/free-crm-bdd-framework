@@ -2,13 +2,16 @@ package stepDefs;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.LoginPage;
 
-public class LoginSteps {
-
-    LoginPage loginPage = new LoginPage();
+public class LoginPageSteps {
+    LoginPage loginPage;
+    public LoginPageSteps (LoginPage loginPage){
+        this.loginPage = loginPage;
+    }
 
     @Given("I am on login page")
     public void i_am_on_login_page() {
