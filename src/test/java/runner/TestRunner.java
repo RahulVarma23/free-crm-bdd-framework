@@ -10,9 +10,8 @@ import org.junit.runner.RunWith;
         glue = {"stepDefs","base"},
         dryRun = false,
         monochrome = true,
-        plugin = {"pretty" , "html:target/cucumberr-report.html"}
+        plugin = {"pretty" , "html:target/cucumber-report.html"}
 )
-
 
 public class TestRunner {
 }

@@ -1,5 +1,6 @@
 Feature: Login feature
 
+  @regression
   Scenario Outline: User is able to login with valid credentials
     Given I am on login page
     When I enter username as "<Username>" and password as "<Password>"

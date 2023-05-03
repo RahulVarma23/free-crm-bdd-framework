@@ -22,6 +22,12 @@ cucumber options:
 4. monochrome - formats the console output
 5. plugin - to generate reports or add additional features
 
+Logger:
+1. add log4j dependency
+2. add logger configuration file log4j2.xml or log4j2-test.xml
+3. create logger instance in step def classes
+4. write log statements
+
 
 
 
