@@ -20,6 +20,7 @@ public class LoginPageSteps {
     public void i_am_on_login_page() {
         String title = loginPage.getLoginPageTitle();
         Assert.assertEquals(title , "Cogmento CRM");
+        LOGGER.debug("Login page is validation");
     }
 
     @When("I enter username as {string} and password as {string}")
