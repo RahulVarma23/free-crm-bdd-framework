@@ -22,11 +22,17 @@ cucumber options:
 4. monochrome - formats the console output
 5. plugin - to generate reports or add additional features
 
-Logger:
+Logger: used to log messages or actions performed
 1. add log4j dependency
 2. add logger configuration file log4j2.xml or log4j2-test.xml under src/test/resources
 3. create logger instance in step def classes
 4. write log statements
+
+extent reports:open source reporting library .used to generate beautiful, lucrative reports with detailed execution summary and some pie charts
+1. add dependency of cucumber extent report adapter
+2. add config files extent.properties and extent-config.xml
+3. add plugin to test runner : plugin = { "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+4. modify screenshot method to take screenshot
 
 
 

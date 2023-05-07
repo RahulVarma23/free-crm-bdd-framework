@@ -15,7 +15,7 @@ import java.io.IOException;
         glue = {"stepDefs","base"},
         dryRun = false,
         monochrome = true,
-        plugin = {"pretty" , "html:target/cucumber-report.html"}
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 
 public class TestRunner {

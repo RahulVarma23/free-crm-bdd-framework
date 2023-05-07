@@ -32,6 +32,7 @@ public abstract class GenericFunctions {
     }
 
     public void enterText(WebElement element, String text){
+        element.clear();
         element.sendKeys(text);
     }
 

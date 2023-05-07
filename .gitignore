@@ -1,6 +1,8 @@
 # output files
 target/
 logs/
+Screenshots/
+Report/
 
 # Eclipse m2e generated files
 # Eclipse Core
